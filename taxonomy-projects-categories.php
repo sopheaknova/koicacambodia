@@ -1,0 +1,36 @@
+<?php get_header(); ?>
+<?php $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) ); ?>
+<div class="inner">
+    <div class="container">
+    <div class="main">
+	<?php the_breadcrumb(); ?>
+    <div class="box_outer">
+	<article class="cat_article">
+	        <h1 class="cat_article_title page_title"><?php echo $term->name ?></h1>
+    <div class="single_article_content">
+        <p>File list of <?php echo $term->name ?> are goes here:</p>
+    </div> <!--Single Article content-->
+    </article> <!--End Single Article-->
+    </div> <!--Box Outer-->
+    </div> <!--End Main-->
+        <aside class="sidebar">
+	 <?php global $wp_query; $postid = $wp_query->post->ID; $cus = get_post_meta($postid, 'sbg_selected_sidebar_replacement', true);?>
+	<?php if ($cus != '') { ?>
+        <?php if ($cus[0] != '0') { ?>
+             <?php if  (function_exists('dynamic_sidebar') && dynamic_sidebar($cus[0])){ }else { ?>
+        	<p class="noside"><?php _e('There Is No Sidebar Widgets Yet', 'theme'); ?></p>
+         <?php } ?>
+	<?php } else { ?>
+         <?php if  (function_exists('dynamic_sidebar') && dynamic_sidebar('Main sidebar')){ }else { ?>
+        	<p class="noside"><?php _e('There Is No Sidebar Widgets Yet', 'theme'); ?></p>
+         <?php } ?>
+	<?php } ?>
+        <?php } else { ?>
+         <?php if  (function_exists('dynamic_sidebar') && dynamic_sidebar('Main sidebar')){ }else { ?>
+        	<p class="noside"><?php _e('There Is No Sidebar Widgets Yet', 'theme'); ?></p>
+         <?php } ?>
+    <?php } ?>
+    </aside> <!--End Sidebar-->
+    </div> <!--End Container-->
+ </div><!--End Inner-->   
+ <?php get_footer(); ?>
