@@ -1493,7 +1493,8 @@ a.archives{
        
 }
 .single_article_content {
-	min-height:862px;
+	min-height:620px;
+	padding-bottom: 20px;
 }
 .single_article_content a, .single_article_content a {
        color:#217DD3;
@@ -1633,6 +1634,11 @@ a.archives{
        float:left;
        margin-right:10px;
 }
+
+.addthis_toolbox{
+	margin-bottom: 20px;
+}
+
 /* Author box */
 .author_box {
     border:1px solid #ebebeb;
