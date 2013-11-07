@@ -1,0 +1,25 @@
+/*********************************************
+*   Dark Skin
+**********************************************/
+body{
+	color: #000;
+}
+
+#header, #navigation, #crumbs, #footer,
+.sidebar, .articles_nav, .related_box_title, .related_box{
+	display: none;
+}
+
+.main {
+	float: none;
+	width:auto;
+}
+
+.single_article_content p{
+	font-size: 13pt;
+}
+
+.single_article_content .wp-caption-text{
+	font-size: 11pt;
+	color:#666;
+}

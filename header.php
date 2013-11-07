@@ -15,6 +15,9 @@
 o2_create_stylesheet();
 ?>
 
+<!-- Single print -->
+<link href="<?php bloginfo('template_url'); ?>/css/print.css" rel="stylesheet" media="print" type="text/css" />
+
 <!-- Custom favicon -->
 <link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/favicons.ico" />
 
@@ -32,9 +35,8 @@ o2_create_stylesheet();
 </head>
 
 <body>
-
 <header id="header">
-    <div class="inner">
+    <div class="inner clearfix">
     	<div class="logo">
         <h2><a href="<?php echo home_url(); ?>" title="KOICA CAMBODIA">
         <?php if(of_get_option('logo_img')){ ?>
@@ -52,6 +54,11 @@ o2_create_stylesheet();
         <img src="<?php echo O2_IMG; ?>/slogan.png" alt="<?php bloginfo('description'); ?>" />
         <?php } ?>        
         </div>
+        
+        <div class="search_box">
+        <?php include TEMPLATEPATH . '/searchform.php'; ?>
+	    </div> <!--Search Box-->
+        
     </div>
 </header><!--/header-->
 
@@ -70,10 +77,6 @@ o2_create_stylesheet();
 			 </ul> <!--Top Nav-->
 
 <?php } ?>
-        
-        <div class="search_box">
-        <?php include TEMPLATEPATH . '/searchform.php'; ?>
-	    </div> <!--Search Box-->
         
     </div> <!--End Nav Wrap-->
     </div> <!--Inner-->

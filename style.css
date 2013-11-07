@@ -379,33 +379,32 @@ display:block;
 	position:relative;
 }
 #header .logo {
-    float:left;
 	width:300px;
-	margin-top:41px;
-	margin-left:10px;
+	position: absolute;
+	left: 20px;
+	top: 40px;
 }
 #header .slogan {
-    float:right;
-    width:468px;
+    width:368px;
     height:100px;
-	margin-top:50px;
+    position: absolute;
+    left: 450px;
+    top: 50px;
 }
 
+/* Search top */
 
-/*******************************************************************
- * 		Navigation
- *******************************************************************/
-#navigation .search_box{
+#header .search_box{
 	width:170px;
-	float:right;
-	margin-right:10px;
-	display:inline-block;	
+	position: absolute;
+	right: 10px;
+	top: 7px;
 }
 	.search_box form .search-wrap{
 		position:relative;
 	}
 
-#navigation .search_box .sf{
+#header .search_box .sf{
 	border:1px solid #a5a6a7;
 	-webkit-border-radius: 20px;
     -moz-border-radius: 20px;
@@ -422,7 +421,7 @@ display:block;
 	width:160px;
 }
 
-#navigation .search_box .sb{
+#header .search_box .sb{
 	width:34px;
     height:25px;
     background:url(images/search_icon.png) no-repeat center;
@@ -433,6 +432,10 @@ display:block;
 	right:0; 
 	top:1px;
 }
+
+/*******************************************************************
+ * 		Navigation
+ *******************************************************************/
 
 #navigation ul.nav{
 	float:left;
@@ -461,8 +464,8 @@ display:block;
    background:url(images/nav-v-line.gif) 100% 6px no-repeat;
 
 }
-#navigation ul.nav > li:first-child  {
-    /*border-left:1px solid #eaeaea;*/
+#navigation ul.nav > li:last-child  {
+    background: none;
 }
 
 #navigation ul.nav li {
